@@ -1,5 +1,6 @@
+
 body {
-  background-color: #334155;
+  background-color: #9dbff0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
@@ -7,37 +8,55 @@ body {
   padding-top: 4px;
 }
 
-.mouse {
-  font-size: 24px;
-}
-
-.counter {
-  color: #fbbf24;
-}
-
 h2 {
-  color: #f9a8d4;
+  color: #f92399;
 }
 
-/* CSS */
-button {
-  appearance: none;
-  background-color: #b45309;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 6px 16px;
-  position: relative;
-  text-align: center;
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  height:98%;
+  width:98%;
 }
 
-button:hover {
-  background-color: #92400e;
+h3 > * {
+  background-color: #9dc4f0;
+  padding: 1em;
+}
+
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+h4 {
+  min-height: 40%;
+  overflow-y: scroll;
+}
+
+
+h3 > * {
+  margin-bottom: 2%;
+}
+
+/* Now let's apply grid for wider viewports. */
+@media screen and (min-width: 40em) {
+  h3 > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  h3 {
+    display: grid;
+    grid-template-columns: 18% 60% 18%;
+    grid-gap: 2% 2%;
+    grid-template-rows: 10% auto 10%;
+  }
+  h3 {
+    grid-column: 1 / span 3;
+    background-color: lightpink
+  }
+  
+ h4{
+    grid-column: 2;
+    background-color: lightgreen
+
+  }
+
+
+
 }

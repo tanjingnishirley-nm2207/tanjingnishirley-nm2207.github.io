@@ -1,5 +1,5 @@
 body {
-  background-color: #334155;
+  background-color: #6fa5f0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
@@ -41,3 +41,4 @@ button {
 button:hover {
   background-color: #92400e;
 }
+
