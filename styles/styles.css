@@ -12,51 +12,47 @@ h2 {
   color: #f92399;
 }
 
-h3 {
-  font-family: Helvetica, Arial, sans-serif;
-  height:98%;
-  width:98%;
-}
 
-h3 > * {
-  background-color: #9dc4f0;
-  padding: 1em;
-}
-
-/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
-h4 {
-  min-height: 40%;
-  overflow-y: scroll;
-}
-
-
-h3 > * {
-  margin-bottom: 2%;
-}
-
-/* Now let's apply grid for wider viewports. */
-@media screen and (min-width: 40em) {
-  h3 > * {
-    margin-bottom: 0;
-  }
-  /* Define the grid */
-  h3 {
-    display: grid;
-    grid-template-columns: 18% 60% 18%;
-    grid-gap: 2% 2%;
-    grid-template-rows: 10% auto 10%;
-  }
-  h3 {
-    grid-column: 1 / span 3;
-    background-color: lightpink
-  }
-  
- h4{
-    grid-column: 2;
-    background-color: lightgreen
-
+  div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
   }
 
 
-
+.menuIcon {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  right: 0%;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}

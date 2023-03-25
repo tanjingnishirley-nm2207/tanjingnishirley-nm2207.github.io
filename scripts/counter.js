@@ -1,15 +1,6 @@
-/*let counter = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("button").onclick = count;
-});
+document.getElementById("waiting").addEventListener("load", myFunction);
 
-function count() {
-  counter++;
-
-  if (counter % 10 === 0) {
-    alert("Mouse would like to thank you for the food 🥙");
-  }
-
-  document.querySelector(".counter").innerHTML = counter;
-}*/
+function myFunction() {
+  document.getElementById("demo").innerHTML = "audio is loaded.";
+}
