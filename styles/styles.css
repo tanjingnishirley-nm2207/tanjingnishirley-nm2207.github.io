@@ -1,10 +1,10 @@
 
 body {
-  background-color: #9dbff0;
+  background-color: #000000;
 }
 
 .dropbtn {
-  background-color: #9dbff0;
+  background-color: #000000;
   color: white;
   padding: 10px;
   font-size: 40px;
@@ -46,41 +46,55 @@ body {
 
 .show {display: block;}
 
-.first{ 
+.zero{ 
   display: flex ; 
   font-size: 70px;
   justify-content: center;
   padding: 180px;
+  color: white;
 }
 
-.second{ 
+
+.one{ 
   display: flex ; 
   font-size: 70px;
-  text-align: center;
-  padding: 200px;
+  justify-content: center;
+  padding: 180px;
+  color: white;
+}
+
+.two{ 
+  display: flex ; 
+  font-size: 70px;
+  justify-content: center;
+  padding: 180px;
+  color: white;
   
 }
 
-.third{ 
+.three{ 
   display: flex ; 
   font-size: 70px;
   justify-content: center;
   padding: 180px;
+  color: white;
 }
 
-.fourth{ 
+
+.four{ 
   display: flex ; 
-  font-size: 70px;
+  font-size: 50px;
   text-align: center;
   padding: 200px;
-
+  color: orange;
+	letter-spacing: 2px;
 }
 .fifth{ 
   display: flex ; 
   font-size: 70px;
   justify-content: center;
   padding: 200px;
-  
+  color: white;
 }
 
 .sixth{ 
@@ -88,18 +102,35 @@ body {
   font-size: 70px;
   justify-content: center;
   padding: 180px;
+  color: white;
 }
 
-.seventh{ 
+.seven{ 
   display: flex ; 
   font-size: 70px;
   justify-content: center;
   padding: 200px;
+  color: white;
 
 }
 
 
+#cursor {
+	width: 3px;
+	height: 50px;
+	background-color: orange;
+  animation: blink 1s infinite;
+  
+}
 
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: orange; 
+	}
+}
 
 
 
