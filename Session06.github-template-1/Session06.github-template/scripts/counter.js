@@ -55,4 +55,76 @@ const intervalId = setInterval( function() {
   
  
 
-}, 100);  
+}, 100);  d3.csv ("https://raw.githubusercontent.com/tanjingnishirley-nm2207/tanjingnishirley-nm2207.github.io/main/word.csv ", function (errs, datay) {
+  if (errs) {
+    console.error(errs);
+    return;
+  }
+  
+const hihi = datay.map(function(d) { return d.MoST; })
+console.log(
+let result = '';
+if (typeof hihi === 'string') {
+  result = hihi.split(' ');
+}
+
+console.log(result);
+/*hihi.toString()
+console.log(hihi)
+const myArray = hihi.split(" ")
+console.log(myArray)*/
+
+})
+  
+  
+const data = fetch(
+  "https://raw.githubusercontent.com/tanjingnishirley-nm2207/tanjingnishirley-nm2207.github.io/main/NewAge.csv" //replace this with the appropriate URL
+)
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (data) {
+    const table = [];
+    const rows = data.split("\r\n"); //replace this with the appropriate values
+    console.log(rows)
+
+    //insert your forEach loop here
+    rows.forEach((r, index) => {
+      const item =r.split(",");
+      table.push(item);
+      console.log(item)
+    });
+  })
+
+  d3.csv("https://raw.githubusercontent.com/tanjingnishirley-nm2207/tanjingnishirley-nm2207.github.io/main/test.csv", function (err, data) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  const Age = {
+    x: data.map(function(d) { return d.Age; }),
+    y: data.map(function(d) { return d.Occurrence; }),
+    name: "Age",
+    mode: "markers",
+    type: "Scatter",
+    };
+   const plotData = [Age ]
+   const layout = {
+    title: {
+      text: "agegegege",
+      font: { size: 24 }
+    },
+    xaxis: {
+      title: "Year",
+    },
+    yaxis: {
+      title: "Life Expectancy",
+    },
+  };
+
+  Plotly.newPlot("scatter", plotData, layout);
+
+});
+
+  
+  
