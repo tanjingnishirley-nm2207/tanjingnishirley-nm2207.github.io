@@ -1,6 +1,7 @@
 
 body {
   background-color: #000000;
+  font-family: 'VT323', monospace;
 }
 
 .dropbtn {
@@ -20,7 +21,6 @@ body {
 
 .clickDropdown {
   position: relative;
-  /*display list items horizontally instead of vertically.*/
   display: inline-block;
   
 }
@@ -48,88 +48,149 @@ body {
 
 .zero{ 
   display: flex ; 
-  font-size: 70px;
+  font-size: 60px;
   justify-content: center;
   padding: 180px;
   color: white;
+  
 }
 
 
 .one{ 
   display: flex ; 
-  font-size: 70px;
+  font-size: 60px;
   justify-content: center;
   padding: 180px;
   color: white;
+  text-align: center;
 }
 
 .two{ 
   display: flex ; 
-  font-size: 70px;
+  font-size: 60px;
   justify-content: center;
-  padding: 180px;
+  padding: 200px;
   color: white;
+  text-align: center;
   
 }
 
 .three{ 
   display: flex ; 
-  font-size: 70px;
   justify-content: center;
   padding: 180px;
   color: white;
+  font-size: 60px;
+  text-align: center;
 }
-
 
 .four{ 
   display: flex ; 
-  font-size: 50px;
-  text-align: center;
-  padding: 200px;
-  color: orange;
-	letter-spacing: 2px;
-}
-.fifth{ 
-  display: flex ; 
-  font-size: 70px;
-  justify-content: center;
-  padding: 200px;
-  color: white;
-}
-
-.sixth{ 
-  display: flex ; 
-  font-size: 70px;
   justify-content: center;
   padding: 180px;
-  color: white;
 }
 
-.seven{ 
+
+h1{
+  font-size: 30px;
+  color: orange;
+}/*learnt this from youtube*/
+/*to make a psuedo element absolute, need to make parent element position relative*/
+.typewriter{
+  position: relative;
+}
+/*psuedo element*/
+.typewriter::after{
+  content: '|';
+  position: absolute;
+  right: 0;
+  color: orange;
+  background-color: #000000;
+  width: 100%; /*to hide everything*/
+  animation: typing 10s steps(50) alternate infinite /*to show the deleting effect*/,
+              line 1s infinite;
+}
+@keyframes typing{
+  to{
+      width: 0%;
+  }
+}
+@keyframes line {
+  50%{
+      color: transparent;
+      
+  }
+}
+
+
+
+.five{ 
+  display: flex ; 
+  font-size: 60px;
+  justify-content: center;
+  padding: 200px;
+  color: white;
+  text-align: center;
+}
+
+
+.six{ 
+  display: flex ; 
+  font-size: 50px;
+  justify-content: center;
+  text-align: center;
+  padding: 200px;
+  color: yellow;
+  text-align: center;
+  
+  }
+/*this is the disappearing effect i learnt from the internet*/
+ .six span{
+  line-height: 0;
+  /*this meant that the animation will take a total of 30s to disappear and appear again and its looped */
+  animation: disappear 15s alternate infinite;
+ }
+ @keyframes disappear {
+  50% {
+      text-shadow: 0 0 40px #000000;
+  }
+  to {
+      text-shadow: 0 0 20px #000000;
+      opacity: 0;
+  }
+}
+
+
+
+.eight{ 
+  display: flex ; 
+  font-size: 45px;
+  justify-content: center;
+  padding: 200px;
+  color: royalblue;
+  text-align: center;
+  transition: 3s ease-in-out;
+
+}
+
+
+.eight:hover {
+/*learnt from youtube, this allows you to change the scale of yout text when you hover your mouse over it*/
+  transform: scale(5);
+  -webkit-transform: scale(5);
+  -ms-transform: scale(5);
+}
+
+
+
+.ten{ 
   display: flex ; 
   font-size: 70px;
   justify-content: center;
   padding: 200px;
   color: white;
+  text-align: center;
 
-}
-
-
-#cursor {
-	width: 3px;
-	height: 50px;
-	background-color: orange;
-  animation: blink 1s infinite;
-  
-}
-
-@keyframes blink {
-	from, to { 
-		background-color: transparent 
-	}
-	50% { 
-		background-color: orange; 
-	}
 }
 
 
